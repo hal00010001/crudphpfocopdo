@@ -23,4 +23,11 @@ class ClassCrud extends ClassConexao {
     private function countParametros($parametros){
         $this->contador = count($parametros);
     }
+    
+    //Insercao no banco de dados
+    public function insertDB($tabela, $condicao, $parametros){
+        $this->preparedStatements("insert into {$tabela} values ({$condicao})", $parametros);
+        return $this->crud;
+    }
+    
 }
