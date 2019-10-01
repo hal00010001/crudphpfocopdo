@@ -7,6 +7,10 @@ and open the template in the editor.
     Created on : Sep 29, 2019, 12:59:36 AM
     Author     : hal
 */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 .banner{
     float:left; 
     width: 100%;
@@ -45,8 +49,47 @@ and open the template in the editor.
     font-size: 20px;
     background: #777;
 }
+.center{
+    text-align: center;
+}
 .content{
     float: left;
     width: 100%;
     padding: 15px;
+}
+.resultado{
+    display: none;
+    float: left;
+    width: 70%;
+    height: 100px;
+    margin: 20px 15% 10px 15%;
+}
+.formulario{
+    float: left;
+    width: 70%;
+    height: 300px;
+    margin: 20px 15%;    
+}
+.formularioInput{
+    float: left;
+    width: 50%;
+    padding: 0 5%;
+}
+.formularioInput100{
+    width: 100% !important;    
+}
+.formularioInput input[type='text']{
+    width: 100%;
+    height: 45px;
+}
+.formularioInput input[type='submit']{
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px 0;
+    background: #000000;
+    color:#fff;
+    border: 0;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
 }

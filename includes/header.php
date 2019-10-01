@@ -15,8 +15,8 @@ and open the template in the editor.
             <img src="images/banner.jpg" alt="Banner Crud">
         </div>
         <div class="nav">
-            <li><a href="cadastro">Cadastro</a></li>
-            <li><a href="selecao">Seleção</a></li>
-            <li><a href="delete">Delete</a></li>
-            <li><a href="atualizacao">Atualização</a></li>
+            <li><a href="cadastro.php">Cadastro</a></li>
+            <li><a href="selecao.php">Seleção</a></li>
+            <li><a href="delete.php">Delete</a></li>
+            <li><a href="atualizacao.php">Atualização</a></li>
         </div>
