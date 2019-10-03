@@ -1,7 +1,13 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+$("#FormCadastro").on('submit', function(event){
+    event.preventDefault();
+    var Dados = $(this).serialize();
+    $.ajax({
+        url: '../../Controllers/ControllerCadastro.php',
+        method: 'post',
+        dataType: 'html',
+        data: Dados,
+        success: function(Dados){
+            $('.resultado').html(Dados);
+        }
+    })
+})

@@ -13,3 +13,5 @@ $crud->insertDB(
             $cidade                  
         )
     );
+
+echo "Cadastro realizado com sucesso";
