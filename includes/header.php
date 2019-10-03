@@ -9,6 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>Class Crud</title>
         <link rel="stylesheet" href="resources/css/style.css">
+        <script src="resources/js/javascript.js"></script>
     </head>
     <body>
         <div class="banner">
