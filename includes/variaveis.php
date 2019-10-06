@@ -1,4 +1,16 @@
 <?php
+
+if(isset($_POST['id'])){
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
+}
+elseif(isset($_GET['id'])){
+    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
+}
+else {
+    $id = 0;
+}
+
+
 if(isset($_POST['nome'])){
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 }

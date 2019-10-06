@@ -1,7 +1,9 @@
 <?php
 
+include("ClassConexao.php");
+
 class ClassCrud extends ClassConexao {
-    
+           
     //Atributos
     private $crud;
     private $contador;
@@ -11,8 +13,8 @@ class ClassCrud extends ClassConexao {
         $this->countParametros($parametros);
         $this->crud = $this->conectaDB()->prepare($query);
         if($this->contador > 0){
-            for($i=0; $i<=$this->contador; $i++){
-                $this->crud->bindValue($i, $parametros[$i]);
+            for($i=1; $i<=$this->contador; $i++){
+                $this->crud->bindValue($i, $parametros[$i - 1]);
             }
         }
         $this->crud->execute();
@@ -25,7 +27,7 @@ class ClassCrud extends ClassConexao {
     }
     
     //Insercao no banco de dados
-    public function insertDB($tabela, $condicao, $parametros){
+    public function insertDB($tabela, $condicao, $parametros){        
         $this->preparedStatements("insert into {$tabela} values ({$condicao})", $parametros);
         return $this->crud;
     }
