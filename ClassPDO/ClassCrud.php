@@ -1,5 +1,6 @@
 <?php
 
+//include("{$_SERVER['DOCUMENT_ROOT']}/crudphpfocopdo/ClassPDO/ClassConexao.php");
 include("ClassConexao.php");
 
 class ClassCrud extends ClassConexao {
@@ -29,6 +30,12 @@ class ClassCrud extends ClassConexao {
     //Insercao no banco de dados
     public function insertDB($tabela, $condicao, $parametros){        
         $this->preparedStatements("insert into {$tabela} values ({$condicao})", $parametros);
+        return $this->crud;
+    }
+    
+    //Insercao no banco de dados
+    public function selectDB($campos, $tabela, $condicao, $parametros){        
+        $this->preparedStatements("select {$campos} from {$tabela} {$condicao}", $parametros);
         return $this->crud;
     }
     
