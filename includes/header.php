@@ -9,7 +9,9 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>Class Crud</title>
         <link rel="stylesheet" href="resources/css/style.css">
-        <script src="resources/js/javascript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--<script src="./resources/js/zepto.js"></script>-->
+        <script src="./resources/js/javascript.js"></script>
     </head>
     <body>
         <div class="banner">

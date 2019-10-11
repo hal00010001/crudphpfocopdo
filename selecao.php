@@ -34,8 +34,8 @@ include("./ClassPDO/ClassCrud.php");
                     <td><?php echo $fetchs['cidade']; ?></td>
                     <td>
                         <a href="<?php echo "visualizar.php?id={$fetchs['id']}"; ?>">Visualizar</a>
-                        <a href='atualizar.php'>Editar</a>
-                        <a href='deletar.php'>Deletar</a>
+                        <a href="<?php echo "cadastro.php?id={$fetchs['id']}"; ?>">Editar</a>
+                        <a class="deletar" href="<?php echo "Controllers/ControllerDeletar.php?id={$fetchs['id']}"; ?>">Deletar</a>
                     </td>
                 </tr>
         

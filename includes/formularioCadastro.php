@@ -12,6 +12,7 @@
     <div class="formulario">
         <h1 class="center">Cadastro</h1>
         <form name="formCadastro" id="formCadastro" method="post" action="Controllers/ControllerCadastro.php">
+            <input type="hidden" id="acao" name="acao" value="" />
             <div class="formularioInput">
                 Nome: <br/>
                 <input type="text" id="nome" name="nome" />
