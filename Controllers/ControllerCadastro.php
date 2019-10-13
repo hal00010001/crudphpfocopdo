@@ -7,7 +7,9 @@ include ("../ClassPDO/ClassCrud.php");
 //echo "$id, $nome, $sexo, $cidade";
 
 $crud = new ClassCrud();
-$crud->insertDB(
+
+if($acao == 'cadastrar'){
+    $crud->insertDB(
         "cadastro",
         "?, ?, ?, ?",
         array(
@@ -17,5 +19,11 @@ $crud->insertDB(
             $cidade                  
         )
     );
+    echo "Cadastro realizado com sucesso";
+}
+else {
+    $crud->updateDB("cadastro", "nome = ?, sexo = ?, cidade = ?", "id = ?", array($nome, $sexo, $cidade, $id));
+    echo "Cadastro atualizado com sucesso";
+}
 
-echo "Cadastro realizado com sucesso";
+
