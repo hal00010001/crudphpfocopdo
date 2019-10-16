@@ -3,7 +3,7 @@
 if(isset($_POST['acao'])){
     $acao = filter_input(INPUT_POST, 'acao', FILTER_SANITIZE_SPECIAL_CHARS);
 }
-elseif(isset($_GET['id'])){
+elseif(isset($_GET['acao'])){
     $acao = filter_input(INPUT_GET, 'acao', FILTER_SANITIZE_SPECIAL_CHARS);
 }
 else {
